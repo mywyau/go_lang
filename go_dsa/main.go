@@ -8,9 +8,9 @@ import (
 )
 
 func main() {
-	
+
 	arr := []int{1, 3, 5, 7, 9, 11}
 
     fmt.Println(basics.X, basics.Name, basics.Alive)
-    fmt.Println(searching.Binary_search(arr, 7))
+    fmt.Println(searching.BinarySearch(arr, 7))
 }
