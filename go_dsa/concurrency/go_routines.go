@@ -1,4 +1,0 @@
-package concurrency
-
-go doWork()
-
