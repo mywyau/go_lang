@@ -1,0 +1,7 @@
+2025-01-04 09:15:21 INFO  Starting system check
+2025-01-04 09:15:21 INFO  Loading configuration file
+2025-01-04 09:15:22 WARN  Missing optional field in config: retry_interval
+2025-01-04 09:15:23 INFO  Worker pool initialized with 4 workers
+2025-01-04 09:15:24 ERROR Failed to connect to remote service (timeout)
+2025-01-04 09:15:25 INFO  Retrying connection...
+2025-01-04 09:15:27 INFO  System running normally

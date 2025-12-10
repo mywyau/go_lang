@@ -1,0 +1,3 @@
+Golang is a powerful language for building concurrent systems.
+This is another example file to demonstrate parallel processing.
+Workers will read this file at the same time as others.

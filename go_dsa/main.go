@@ -2,9 +2,8 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/mywyau/go_lang/go_dsa/basics"
-	"github.com/mywyau/go_lang/go_dsa/searching"
+	"go_lang/go_dsa/basics"
+	"go_lang/go_dsa/searching"
 )
 
 func main() {
