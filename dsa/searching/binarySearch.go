@@ -1,6 +1,10 @@
 package searching
 
-func binarySearch(nums []int, target int) int {
+
+// capitalisation to allow export 
+// lowercase binarySearch would make this function private
+
+func BinarySearch(nums []int, target int) int {
 
 	left, right := 0, len(nums)-1
 
