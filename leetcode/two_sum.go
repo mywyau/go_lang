@@ -1,6 +1,8 @@
 package leetcode
 
-func twoSum(nums []int, target int) []int {
+// exporting and non-private via Capitalisation
+
+func TwoSum(nums []int, target int) []int {
 	seen := map[int]int{}
 
 	for i, num := range nums {

@@ -3,7 +3,7 @@ package leetcode
 import "testing"
 
 func TestTwoSum(t *testing.T) {
-	got := twoSum([]int{2, 7, 11, 15}, 9)
+	got := TwoSum([]int{2, 7, 11, 15}, 9)
 	want := []int{0, 1}
 
 	if len(got) != len(want) {
