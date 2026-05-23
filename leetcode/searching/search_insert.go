@@ -23,6 +23,5 @@ func SearchInsert(nums []int, target int) int {
 	return left
 }
 
-
 // Why return left?
 // Because when the loop finishes, left points to the correct insert position.
