@@ -1,7 +1,6 @@
 package searching
 
-
-// capitalisation to allow export 
+// capitalisation to allow export
 // lowercase binarySearch would make this function private
 
 func BinarySearch(nums []int, target int) int {
@@ -14,8 +13,7 @@ func BinarySearch(nums []int, target int) int {
 
 		if nums[mid] == target {
 			return mid
-		}
-		if nums[mid] < target {
+		} else if nums[mid] < target {
 			left = mid + 1
 		} else {
 			right = mid - 1
