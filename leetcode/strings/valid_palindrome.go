@@ -1,11 +1,19 @@
 package strings
 
+// Ignore spaces/punctuation.
+// Compare left and right characters.
+// Move inward.
+
+// two pointers
+
+// private
 func isAlphaNumeric(ch byte) bool {
 	return (ch >= 'a' && ch <= 'z') ||
 		(ch >= 'A' && ch <= 'Z') ||
 		(ch >= '0' && ch <= '9')
 }
 
+// private
 func toLower(ch byte) byte {
 	if ch >= 'A' && ch <= 'Z' {
 		return ch + 32
