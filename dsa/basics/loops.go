@@ -56,9 +56,10 @@ func LoopExamples5() {
 	for key, value := range ages {
 		fmt.Println("map-range:", key, value)
 	}
+}
 
-	// 6. Loop over a string (runes)
-
+// 6. Loop over a string (runes)
+func LoopExamples6() {
 	for i, r := range "Go!" {
 		fmt.Println("string-range:", i, string(r))
 	}
