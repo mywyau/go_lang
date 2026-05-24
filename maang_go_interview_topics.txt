@@ -1,0 +1,989 @@
+MAANG / FAANG INTERVIEW TOPICS ROADMAP - GO FOCUS
+
+Goal:
+Prepare for MAANG-style software engineering interviews using Go as the main interview language.
+
+Focus areas:
+1. Data structures and algorithms
+2. Go language fluency
+3. System design
+4. Backend engineering fundamentals
+5. Testing and debugging
+6. Behavioural/project storytelling
+
+
+============================================================
+1. GO LANGUAGE FLUENCY
+============================================================
+
+Before grinding LeetCode, get comfortable writing Go quickly.
+
+Must know:
+
+- package structure
+- functions
+- if / else
+- for loops
+- slices
+- arrays
+- maps
+- structs
+- methods
+- pointers
+- errors
+- interfaces
+- sorting
+- strings
+- runes vs bytes
+- basic testing
+- table-driven tests
+
+Important Go interview tools:
+
+- []int
+- []string
+- map[int]int
+- map[string]int
+- map[rune]int
+- map[byte]int
+- map[string]bool
+- sort.Ints()
+- sort.Strings()
+- sort.Slice()
+- strings.Builder
+- len()
+- append()
+- make()
+- delete()
+
+Example patterns to practise:
+
+- create a frequency map
+- check if a key exists in a map
+- append to a slice
+- remove from a slice
+- sort numbers
+- sort structs
+- reverse a slice
+- convert string to []rune
+- write a helper function
+- write a table-driven unit test
+
+
+============================================================
+2. CORE DSA TOPICS
+============================================================
+
+Priority order:
+
+1. Arrays and strings
+2. Hash maps and sets
+3. Two pointers
+4. Sliding window
+5. Stack
+6. Queue
+7. Binary search
+8. Sorting
+9. Intervals
+10. Linked lists
+11. Recursion
+12. Trees
+13. Graphs
+14. Heaps / priority queues
+15. Backtracking
+16. Dynamic programming basics
+17. Union Find
+18. Topological sort
+19. Bit manipulation basics
+
+
+============================================================
+3. ARRAYS AND STRINGS
+============================================================
+
+You should be able to solve:
+
+- Two Sum
+- Contains Duplicate
+- Valid Anagram
+- Group Anagrams
+- Product of Array Except Self
+- Maximum Subarray
+- Merge Sorted Array
+- Move Zeroes
+- Rotate Array
+- Best Time to Buy and Sell Stock
+- Longest Common Prefix
+- Reverse String
+- Reverse Words in a String
+
+Go skills needed:
+
+- loop over a slice
+- loop over a string
+- use index-based loops
+- use range loops
+- build maps for counting
+- mutate slices in place
+- understand byte vs rune
+
+Core idea:
+Most array/string questions are about scanning, counting, comparing, or rearranging values.
+
+
+============================================================
+4. HASH MAPS AND SETS
+============================================================
+
+You should be able to solve:
+
+- Two Sum
+- Contains Duplicate
+- Valid Anagram
+- Group Anagrams
+- First Unique Character
+- Intersection of Two Arrays
+- Subarray Sum Equals K
+- Longest Consecutive Sequence
+
+Go skills needed:
+
+- map[int]int
+- map[string]int
+- map[byte]int
+- map[rune]int
+- map[int]bool
+- checking existence:
+
+  value, ok := myMap[key]
+
+Core idea:
+Use a map when you need fast lookup, counting, grouping, or remembering previous values.
+
+
+============================================================
+5. TWO POINTERS
+============================================================
+
+You should be able to solve:
+
+- Two Sum II
+- Valid Palindrome
+- Reverse String
+- Container With Most Water
+- 3Sum
+- Remove Duplicates from Sorted Array
+- Move Zeroes
+- Squares of a Sorted Array
+
+Core idea:
+Use two pointers when working with sorted arrays, pairs, palindromes, or problems where you move inward from both sides.
+
+Common pointer setup:
+
+left := 0
+right := len(nums) - 1
+
+while left < right:
+- if condition is too small, move left
+- if condition is too large, move right
+- if valid, record answer or return
+
+
+============================================================
+6. SLIDING WINDOW
+============================================================
+
+You should be able to solve:
+
+- Longest Substring Without Repeating Characters
+- Maximum Average Subarray
+- Minimum Size Subarray Sum
+- Permutation in String
+- Find All Anagrams in a String
+- Longest Repeating Character Replacement
+- Max Consecutive Ones III
+
+Core idea:
+Use sliding window when the problem asks about a contiguous subarray or substring.
+
+Common clues:
+
+- longest substring
+- shortest subarray
+- maximum window
+- minimum window
+- contiguous
+- consecutive
+
+Common structure:
+
+left := 0
+
+for right := 0; right < len(s); right++ {
+    // add s[right] to the window
+
+    for window is invalid {
+        // remove s[left]
+        left++
+    }
+
+    // update answer
+}
+
+
+============================================================
+7. STACKS
+============================================================
+
+You should be able to solve:
+
+- Valid Parentheses
+- Min Stack
+- Daily Temperatures
+- Next Greater Element
+- Evaluate Reverse Polish Notation
+- Remove All Adjacent Duplicates
+- Asteroid Collision
+
+Go skills needed:
+
+Use a slice as a stack:
+
+stack := []int{}
+
+Push:
+
+stack = append(stack, value)
+
+Pop:
+
+top := stack[len(stack)-1]
+stack = stack[:len(stack)-1]
+
+Peek:
+
+top := stack[len(stack)-1]
+
+Core idea:
+Use a stack when the most recent item matters first.
+
+
+============================================================
+8. QUEUES
+============================================================
+
+You should be able to solve:
+
+- Number of Islands
+- Binary Tree Level Order Traversal
+- Rotting Oranges
+- Walls and Gates
+- Shortest Path in Binary Matrix
+
+Go skills needed:
+
+Use a slice as a queue:
+
+queue := []int{}
+
+Push:
+
+queue = append(queue, value)
+
+Pop from front:
+
+current := queue[0]
+queue = queue[1:]
+
+Core idea:
+Use a queue for BFS and level-by-level processing.
+
+
+============================================================
+9. BINARY SEARCH
+============================================================
+
+You should be able to solve:
+
+- Binary Search
+- Search Insert Position
+- First Bad Version
+- Search in Rotated Sorted Array
+- Find Minimum in Rotated Sorted Array
+- Koko Eating Bananas
+- Capacity to Ship Packages
+- Find First and Last Position of Element
+
+Core idea:
+Use binary search when the search space is sorted or when the answer can be guessed and checked.
+
+Common structure:
+
+left := 0
+right := len(nums) - 1
+
+for left <= right {
+    mid := left + (right-left)/2
+
+    if nums[mid] == target {
+        return mid
+    } else if nums[mid] < target {
+        left = mid + 1
+    } else {
+        right = mid - 1
+    }
+}
+
+return -1
+
+
+============================================================
+10. SORTING AND INTERVALS
+============================================================
+
+You should be able to solve:
+
+- Merge Intervals
+- Insert Interval
+- Meeting Rooms
+- Meeting Rooms II
+- Non-overlapping Intervals
+- Sort Colors
+- K Closest Points to Origin
+
+Go skills needed:
+
+Sort ints:
+
+sort.Ints(nums)
+
+Sort strings:
+
+sort.Strings(words)
+
+Sort custom structs/slices:
+
+sort.Slice(items, func(i, j int) bool {
+    return items[i].Start < items[j].Start
+})
+
+Core idea:
+Many interval problems become easier once sorted by start time.
+
+
+============================================================
+11. LINKED LISTS
+============================================================
+
+You should be able to solve:
+
+- Reverse Linked List
+- Merge Two Sorted Lists
+- Linked List Cycle
+- Remove Nth Node From End
+- Middle of the Linked List
+- Add Two Numbers
+- Reorder List
+
+Go skills needed:
+
+type ListNode struct {
+    Val  int
+    Next *ListNode
+}
+
+Core idea:
+Linked list problems are about pointer manipulation.
+
+Important patterns:
+
+- dummy node
+- slow and fast pointers
+- reversing links
+- tracking previous/current/next
+
+
+============================================================
+12. RECURSION
+============================================================
+
+You should understand:
+
+- base case
+- recursive case
+- call stack
+- returning values
+- backtracking
+- recursion with trees
+- recursion with arrays
+
+Practise:
+
+- factorial
+- fibonacci
+- reverse string recursively
+- tree traversal
+- subsets
+- permutations
+
+Core idea:
+Recursion solves a problem by reducing it into smaller versions of itself.
+
+
+============================================================
+13. TREES
+============================================================
+
+You should be able to solve:
+
+- Maximum Depth of Binary Tree
+- Invert Binary Tree
+- Same Tree
+- Subtree of Another Tree
+- Lowest Common Ancestor
+- Binary Tree Level Order Traversal
+- Validate Binary Search Tree
+- Kth Smallest Element in a BST
+- Diameter of Binary Tree
+- Balanced Binary Tree
+
+Go skills needed:
+
+type TreeNode struct {
+    Val   int
+    Left  *TreeNode
+    Right *TreeNode
+}
+
+Core ideas:
+
+DFS:
+- preorder
+- inorder
+- postorder
+
+BFS:
+- level order traversal using queue
+
+BST:
+- left side is smaller
+- right side is larger
+
+
+============================================================
+14. GRAPHS
+============================================================
+
+You should be able to solve:
+
+- Number of Islands
+- Clone Graph
+- Course Schedule
+- Pacific Atlantic Water Flow
+- Rotting Oranges
+- Word Ladder basics
+- Graph Valid Tree
+- Number of Connected Components
+
+Representations:
+
+Adjacency list:
+
+graph := map[int][]int{}
+
+Visited set:
+
+visited := map[int]bool{}
+
+Core ideas:
+
+DFS:
+- go deep first
+- good for connected components
+
+BFS:
+- level by level
+- good for shortest path in unweighted graphs
+
+Graph complexity:
+
+O(V + E)
+
+V = vertices/nodes
+E = edges/connections
+
+
+============================================================
+15. HEAPS / PRIORITY QUEUES
+============================================================
+
+You should be able to solve:
+
+- Kth Largest Element
+- Top K Frequent Elements
+- Merge K Sorted Lists
+- Find Median from Data Stream
+- K Closest Points to Origin
+- Task Scheduler
+
+Go note:
+Go has a heap package, but it is more verbose than Java/Python.
+
+You need to understand:
+
+- min heap
+- max heap
+- push
+- pop
+- top K problems
+
+Core idea:
+Use a heap when you repeatedly need the smallest or largest item efficiently.
+
+
+============================================================
+16. BACKTRACKING
+============================================================
+
+You should be able to solve:
+
+- Subsets
+- Permutations
+- Combination Sum
+- Letter Combinations of a Phone Number
+- Generate Parentheses
+- Word Search
+
+Core idea:
+Backtracking explores choices, then undoes the choice.
+
+Pattern:
+
+func backtrack(path []int, choices []int) {
+    if done {
+        save answer
+        return
+    }
+
+    for each choice {
+        choose
+        backtrack
+        unchoose
+    }
+}
+
+
+============================================================
+17. DYNAMIC PROGRAMMING BASICS
+============================================================
+
+You should be able to solve:
+
+- Climbing Stairs
+- House Robber
+- Coin Change
+- Longest Increasing Subsequence
+- Longest Common Subsequence
+- Unique Paths
+- Decode Ways
+
+Core idea:
+Use DP when the problem has:
+
+1. overlapping subproblems
+2. optimal substructure
+
+Start with:
+
+- recursion
+- memoization
+- bottom-up table
+
+Do not start with hard DP.
+Get comfortable with easy and medium DP first.
+
+
+============================================================
+18. SYSTEM DESIGN TOPICS
+============================================================
+
+Core topics:
+
+- requirements gathering
+- functional requirements
+- non-functional requirements
+- API design
+- database design
+- caching
+- load balancing
+- horizontal scaling
+- queues
+- event-driven architecture
+- rate limiting
+- authentication
+- authorization
+- file storage
+- CDN
+- observability
+- retries
+- idempotency
+- consistency
+- sharding
+- replication
+- failover
+
+Practise designs:
+
+- URL shortener
+- rate limiter
+- notification system
+- chat app
+- file upload service
+- payment system
+- booking system
+- news feed
+- metrics/logging system
+- distributed job queue
+- search autocomplete
+
+For your background, focus especially on:
+
+- payment system
+- event-driven quest/XP pipeline
+- file upload service
+- rate limiter
+- notification system
+- WebSocket chat system
+- backend API with PostgreSQL + Redis + Kafka
+
+
+============================================================
+19. BACKEND ENGINEERING FUNDAMENTALS
+============================================================
+
+Know:
+
+- REST APIs
+- pagination
+- filtering
+- sorting
+- request validation
+- error handling
+- auth
+- JWTs
+- sessions
+- cookies
+- database indexes
+- transactions
+- isolation levels
+- optimistic locking
+- pessimistic locking
+- schema migrations
+- background jobs
+- queues
+- Kafka basics
+- Redis basics
+- idempotency keys
+- outbox pattern
+- retries
+- dead letter queues
+- feature flags
+- monitoring
+- logging
+- tracing
+- alerts
+
+
+============================================================
+20. DATABASES
+============================================================
+
+Know:
+
+- SQL basics
+- joins
+- indexes
+- composite indexes
+- transactions
+- isolation levels
+- deadlocks
+- normalisation
+- denormalisation
+- read replicas
+- partitioning
+- sharding
+- SQL vs NoSQL
+- Redis use cases
+- PostgreSQL use cases
+- DynamoDB-style access patterns
+- search indexes
+
+Be able to explain when to use:
+
+PostgreSQL:
+- relational data
+- transactions
+- strong consistency
+
+Redis:
+- caching
+- counters
+- sessions
+- rate limiting
+
+Kafka:
+- event streaming
+- async processing
+- decoupling services
+
+S3/R2:
+- file/object storage
+
+OpenSearch/Elasticsearch:
+- search and indexing
+
+
+============================================================
+21. CONCURRENCY
+============================================================
+
+Important for Go and backend interviews.
+
+Know:
+
+- goroutines
+- channels
+- mutexes
+- race conditions
+- deadlocks
+- wait groups
+- worker pools
+- context cancellation
+- timeouts
+- retries
+- backpressure
+
+Go topics:
+
+- go func()
+- sync.WaitGroup
+- sync.Mutex
+- channels
+- select
+- context.Context
+
+Practise:
+
+- worker pool
+- concurrent web requests
+- fan-out/fan-in
+- rate limiter
+- producer/consumer
+- timeout with context
+
+
+============================================================
+22. TESTING AND DEBUGGING
+============================================================
+
+Know:
+
+- Go unit tests
+- table-driven tests
+- edge cases
+- mocking basics
+- integration tests
+- debugging with logs
+- race detector
+- benchmark tests
+- reading unfamiliar code
+- spotting off-by-one errors
+- validating AI-generated code
+
+Go test command:
+
+go test ./...
+
+Verbose:
+
+go test -v ./...
+
+Avoid cached tests:
+
+go test -count=1 ./...
+
+Race detector:
+
+go test -race ./...
+
+
+============================================================
+23. BEHAVIOURAL INTERVIEW PREP
+============================================================
+
+Prepare stories for:
+
+- hard bug
+- production issue
+- disagreement
+- technical trade-off
+- learning a new technology
+- improving performance
+- improving reliability
+- mentoring/helping someone
+- dealing with ambiguity
+- taking ownership
+- missed deadline
+- project you are proud of
+- conflict with stakeholder
+- making a system more maintainable
+
+Use STAR:
+
+S = Situation
+T = Task
+A = Action
+R = Result
+
+Good projects from your background:
+
+- HMRC Scala backend work
+- Dev Quest app
+- AWS/CDK/ECS/RDS/Redis infrastructure
+- Kafka/event-driven architecture ideas
+- TaroTea Cantonese learning app
+- Auth0/Nuxt/Scala backend integration
+- testing and debugging production-style systems
+
+
+============================================================
+24. RECOMMENDED STUDY ORDER
+============================================================
+
+Phase 1: Go basics
+
+- slices
+- maps
+- structs
+- pointers
+- errors
+- sorting
+- strings
+- tests
+
+Phase 2: Core DSA
+
+- arrays
+- strings
+- hash maps
+- two pointers
+- sliding window
+- stacks
+- queues
+
+Phase 3: More DSA
+
+- binary search
+- sorting
+- intervals
+- linked lists
+- recursion
+- trees
+
+Phase 4: Interview medium problems
+
+- graphs
+- heaps
+- backtracking
+- DP basics
+
+Phase 5: System design
+
+- rate limiter
+- URL shortener
+- notification system
+- payment system
+- file upload system
+- chat system
+
+Phase 6: Mock interviews
+
+- timed coding
+- explain trade-offs
+- review mistakes
+- redo failed problems
+
+
+============================================================
+25. WEEKLY PRACTICE PLAN
+============================================================
+
+A good weekly structure:
+
+Monday:
+- DSA pattern practice
+- 2 easy/medium problems
+
+Tuesday:
+- Go language practice
+- rewrite old solutions cleanly
+
+Wednesday:
+- DSA pattern practice
+- 2 medium problems
+
+Thursday:
+- System design
+- 1 design problem
+
+Friday:
+- Backend fundamentals
+- database/concurrency/testing topic
+
+Saturday:
+- Mock interview practice
+- timed coding problem
+
+Sunday:
+- Review mistakes
+- redo failed problems
+- update notes
+
+
+============================================================
+26. WHAT TO DEPRIORITISE EARLY
+============================================================
+
+Do not over-focus on:
+
+- very hard dynamic programming
+- obscure graph algorithms
+- compiler theory
+- advanced maths
+- memorising hundreds of problems
+- learning too many languages at once
+- perfecting Scala for LeetCode
+- building huge side projects instead of interview practice
+
+
+============================================================
+27. MAIN TARGET
+============================================================
+
+Your goal is not to know everything.
+
+Your goal is:
+
+- become solid at Go
+- solve common easy/medium DSA problems
+- recognise patterns quickly
+- explain trade-offs clearly
+- design backend systems confidently
+- tell strong stories from real experience
+
+Best strategy:
+
+Be strong at medium DSA + backend system design + project storytelling.
+
+That is a much better interview strategy than trying to become a LeetCode-hard wizard overnight.
