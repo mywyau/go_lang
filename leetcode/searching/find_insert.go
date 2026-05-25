@@ -4,7 +4,8 @@ package searching
 // Given a sorted array, return the index of the target. If it does not exist, return where it should be inserted.
 
 func FindInsert(nums []int, target int) int {
-	left, right := 0, len(nums)-1
+	left := 0
+	right := len(nums) - 1
 
 	for left <= right {
 		mid := left + (right-left)/2
@@ -20,7 +21,7 @@ func FindInsert(nums []int, target int) int {
 		}
 	}
 
-	return left
+	return left    //in binary search we return -1 but here we return left
 }
 
 // Why return left?
