@@ -1,4 +1,4 @@
-package searching
+package binary
 
 func BinarySearch(nums []int, target int) int {
 

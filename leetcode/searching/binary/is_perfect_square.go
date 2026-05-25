@@ -1,4 +1,4 @@
-package searching
+package binary
 
 func IsPerfectSquare(num int) bool {
 	left, right := 1, num

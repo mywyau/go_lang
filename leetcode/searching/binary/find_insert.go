@@ -1,4 +1,4 @@
-package searching
+package binary
 
 // This is LeetCode 35.
 // Given a sorted array, return the index of the target. If it does not exist, return where it should be inserted.

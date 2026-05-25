@@ -1,4 +1,4 @@
-package searching
+package binary
 
 /*
 LeetCode 69: Sqrt(x)
