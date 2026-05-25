@@ -1,4 +1,4 @@
-package leetcode
+package searching
 
 // exporting and non-private via Capitalisation
 

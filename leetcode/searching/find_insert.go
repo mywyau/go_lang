@@ -3,7 +3,7 @@ package searching
 // This is LeetCode 35.
 // Given a sorted array, return the index of the target. If it does not exist, return where it should be inserted.
 
-func SearchInsert(nums []int, target int) int {
+func FindInsert(nums []int, target int) int {
 	left, right := 0, len(nums)-1
 
 	for left <= right {

@@ -1,4 +1,4 @@
-package leetcode
+package searching
 
 import "testing"
 
