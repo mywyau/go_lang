@@ -1,0 +1,187 @@
+1. Programming language basics
+   - Variables
+   - Functions
+   - Loops
+   - If / else
+   - Arrays
+   - Slices
+   - Maps
+   - Structs
+   - Pointers
+   - Unit tests
+
+2. Big O notation
+   - O(1)
+   - O(log n)
+   - O(n)
+   - O(n log n)
+   - O(n²)
+   - Time complexity
+   - Space complexity
+
+3. Arrays and slices
+   - Looping through arrays
+   - Finding max/min
+   - Reversing arrays
+   - Removing values
+   - Moving zeroes
+   - Prefix sums
+   - Kadane’s algorithm
+
+4. Hash maps
+   - Frequency counting
+   - Checking duplicates
+   - Two Sum
+   - Grouping values
+   - Anagrams
+   - Map as a set
+
+5. Strings
+   - Character frequency
+   - Palindromes
+   - Anagrams
+   - Substrings
+   - Runes vs bytes in Go
+   - String builder basics
+
+6. Two pointers
+   - Reverse array/string
+   - Valid palindrome
+   - Two Sum II
+   - Remove duplicates
+   - 3Sum basics
+
+7. Sliding window
+   - Fixed-size window
+   - Variable-size window
+   - Longest substring without repeating characters
+   - Minimum window substring
+   - Max consecutive ones
+
+8. Searching
+   - Linear search
+   - Binary search
+   - Search insert position
+   - Sqrt(x)
+   - Valid perfect square
+   - Search in rotated sorted array
+   - Binary search on answer
+
+9. Sorting
+   - Bubble sort
+   - Selection sort
+   - Insertion sort
+   - Merge sort
+   - Quick sort
+   - Heap sort
+   - Built-in Go sorting with sort.Ints / sort.Slice
+
+10. Stacks
+   - Push / pop
+   - Valid parentheses
+   - Min stack
+   - Decode string
+   - Monotonic stack basics
+
+11. Queues
+   - Basic queue
+   - BFS queue
+   - Circular queue
+   - Queue using slices
+   - Queue using linked list
+
+12. Linked lists
+   - Singly linked list
+   - Reverse linked list
+   - Merge two sorted lists
+   - Detect cycle
+   - Remove nth node from end
+   - Fast and slow pointers
+
+13. Recursion
+   - Base case
+   - Recursive case
+   - Call stack
+   - Factorial
+   - Fibonacci
+   - Recursive binary search
+   - Tree recursion
+
+14. Trees
+   - Binary trees
+   - Binary search trees
+   - DFS preorder
+   - DFS inorder
+   - DFS postorder
+   - BFS level order
+   - Max depth
+   - Same tree
+   - Validate BST
+   - Lowest common ancestor
+
+15. Heaps / priority queues
+   - Min heap
+   - Max heap
+   - Top K elements
+   - Kth largest element
+   - Merge k sorted lists
+   - Go container/heap package
+
+16. Graphs
+   - Adjacency list
+   - Adjacency matrix
+   - DFS graph traversal
+   - BFS graph traversal
+   - Number of islands
+   - Clone graph
+   - Course schedule
+   - Connected components
+
+17. Backtracking
+   - Subsets
+   - Permutations
+   - Combination sum
+   - Generate parentheses
+   - Word search
+   - N-Queens basics
+
+18. Dynamic programming basics
+   - Memoization
+   - Tabulation
+   - Climbing stairs
+   - House robber
+   - Coin change
+   - Word break
+   - Longest common subsequence
+
+19. Greedy algorithms
+   - Best time to buy and sell stock
+   - Jump game
+   - Gas station
+   - Merge intervals
+   - Non-overlapping intervals
+
+20. Tries
+   - Prefix tree
+   - Insert word
+   - Search word
+   - StartsWith
+   - Word dictionary
+   - Autocomplete-style problems
+
+21. Union Find
+   - Find
+   - Union
+   - Path compression
+   - Number of connected components
+   - Accounts merge
+   - Redundant connection
+
+22. Bit manipulation
+   - AND
+   - OR
+   - XOR
+   - Shifts
+   - Single number
+   - Counting bits
+   - Power of two
