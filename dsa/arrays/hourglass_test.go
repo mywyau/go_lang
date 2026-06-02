@@ -5,12 +5,12 @@ import "testing"
 func TestHourglassSum(t *testing.T) {
 	tests := []struct {
 		name string
-		arr  [][]int
-		want int
+		arr  [][]int32
+		want int32
 	}{
 		{
 			name: "sample input returns 19",
-			arr: [][]int{
+			arr: [][]int32{
 				{1, 1, 1, 0, 0, 0},
 				{0, 1, 0, 0, 0, 0},
 				{1, 1, 1, 0, 0, 0},
@@ -22,7 +22,7 @@ func TestHourglassSum(t *testing.T) {
 		},
 		{
 			name: "negative values example",
-			arr: [][]int{
+			arr: [][]int32{
 				{-9, -9, -9, 1, 1, 1},
 				{0, -9, 0, 4, 3, 2},
 				{-9, -9, -9, 1, 2, 3},
@@ -34,7 +34,7 @@ func TestHourglassSum(t *testing.T) {
 		},
 		{
 			name: "all negative numbers",
-			arr: [][]int{
+			arr: [][]int32{
 				{-1, -1, -1, -1, -1, -1},
 				{-1, -1, -1, -1, -1, -1},
 				{-1, -1, -1, -1, -1, -1},
