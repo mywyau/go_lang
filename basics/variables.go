@@ -19,4 +19,5 @@ func shortForm() {
 	println(name)
 	println(age)
 	println(isDeveloper)
+	
 }

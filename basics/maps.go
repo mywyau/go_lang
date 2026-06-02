@@ -71,6 +71,7 @@ func readingMaps() {
 // ------------------------------------------------------------
 
 func checkingExists() {
+	
 	ages := map[string]int{
 		"Michael": 30,
 	}
