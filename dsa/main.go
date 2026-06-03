@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go_lang/dsa/basics"
+	"go_lang/basics"
 	"go_lang/dsa/searching"
 )
 
