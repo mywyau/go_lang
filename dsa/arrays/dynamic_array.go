@@ -112,6 +112,8 @@
 // 	return answers
 // }
 
+package arrays
+
 func dynamicArray(n int32, queries [][]int32) []int32 {
 	seqList := make([][]int32, n)
 	var lastAnswer int32 = 0

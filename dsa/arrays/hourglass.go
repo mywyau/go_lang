@@ -1,6 +1,6 @@
 package arrays
 
-import "fmt"
+// import "fmt"
 
 // we are trying to learn to loop through 2d arrays and apply a pattern to the elements
 
@@ -47,15 +47,15 @@ func hourglassSum(arr [][]int32) int32 {
 	return maxSum
 }
 
-func main() {
-	arr := [][]int{
-		{1, 1, 1, 0, 0, 0},
-		{0, 1, 0, 0, 0, 0},
-		{1, 1, 1, 0, 0, 0},
-		{0, 0, 2, 4, 4, 0},
-		{0, 0, 0, 2, 0, 0},
-		{0, 0, 1, 2, 4, 0},
-	}
+// func main() {
+// 	arr := [][]int{
+// 		{1, 1, 1, 0, 0, 0},
+// 		{0, 1, 0, 0, 0, 0},
+// 		{1, 1, 1, 0, 0, 0},
+// 		{0, 0, 2, 4, 4, 0},
+// 		{0, 0, 0, 2, 0, 0},
+// 		{0, 0, 1, 2, 4, 0},
+// 	}
 
-	fmt.Println(hourglassSum(arr)) // 19
-}
+// 	fmt.Println(hourglassSum(arr)) // 19
+// }
