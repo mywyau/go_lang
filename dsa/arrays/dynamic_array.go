@@ -71,40 +71,65 @@
 //
 //    So the problem is mainly about managing state while processing queries.
 
+// func dynamicArray(n int32, queries [][]int32) []int32 {
+// 	// Create n empty sequences.
+// 	// Example: n = 2 gives [[], []]
+// 	seqList := make([][]int32, n)
+
+// 	// This value starts at 0 and changes after type 2 queries.
+// 	var lastAnswer int32 = 0
+
+// 	// We store the output from type 2 queries here.
+// 	var answers []int32
+
+// 	for _, query := range queries {
+// 		queryType := query[0]
+// 		x := query[1]
+// 		y := query[2]
+
+// 		// Choose which sequence to use.
+// 		// The formula is given by HackerRank.
+// 		idx := (x ^ lastAnswer) % n
+
+// 		if queryType == 1 {
+// 			// Add y to the selected sequence.
+// 			seqList[idx] = append(seqList[idx], y)
+// 		}
+
+// 		if queryType == 2 {
+// 			// Pick an item from the selected sequence.
+// 			// We use modulo so the valueIndex stays inside the slice length.
+// 			valueIndex := y % int32(len(seqList[idx]))
+
+// 			// Update lastAnswer using the selected value.
+// 			lastAnswer = seqList[idx][valueIndex]
+
+// 			// Save lastAnswer because type 2 queries produce output.
+// 			answers = append(answers, lastAnswer)
+// 		}
+// 	}
+
+// 	return answers
+// }
+
 func dynamicArray(n int32, queries [][]int32) []int32 {
-	// Create n empty sequences.
-	// Example: n = 2 gives [[], []]
 	seqList := make([][]int32, n)
-
-	// This value starts at 0 and changes after type 2 queries.
 	var lastAnswer int32 = 0
-
-	// We store the output from type 2 queries here.
 	var answers []int32
 
 	for _, query := range queries {
 		queryType := query[0]
 		x := query[1]
 		y := query[2]
-
-		// Choose which sequence to use.
-		// The formula is given by HackerRank.
 		idx := (x ^ lastAnswer) % n
 
 		if queryType == 1 {
-			// Add y to the selected sequence.
 			seqList[idx] = append(seqList[idx], y)
 		}
 
 		if queryType == 2 {
-			// Pick an item from the selected sequence.
-			// We use modulo so the valueIndex stays inside the slice length.
 			valueIndex := y % int32(len(seqList[idx]))
-
-			// Update lastAnswer using the selected value.
 			lastAnswer = seqList[idx][valueIndex]
-
-			// Save lastAnswer because type 2 queries produce output.
 			answers = append(answers, lastAnswer)
 		}
 	}
