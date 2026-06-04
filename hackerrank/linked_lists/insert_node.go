@@ -23,7 +23,10 @@ package linkedlists
 //
 // This is O(1) time because we do not need to loop through the list.
 
-func insertNodeAtHead(llist *SinglyLinkedListNode, data int32) *SinglyLinkedListNode {
+func insertNodeAtHead(llist *SinglyLinkedListNode, data int32) *SinglyLinkedListNode { // pay attention to the type, this needs a 
+
+	//create a new SinglyLinkedListNode and give me its memory address via "&" pointer
+
 	newNode := &SinglyLinkedListNode{
 		data: data,
 		next: llist,
@@ -31,6 +34,13 @@ func insertNodeAtHead(llist *SinglyLinkedListNode, data int32) *SinglyLinkedList
 
 	return newNode
 }
+
+// func insertNodeAtHead(llist * SinglyLinkedListNode, data int32) * SinglyLinkedListNode {
+// 	newNode:= &SinglyLinkedListNode{
+// 		data:data,
+// 		next: llist,
+// 	}
+// }
 
 
 func insertNodeAtHead_explicit(llist *SinglyLinkedListNode, data int32) *SinglyLinkedListNode {

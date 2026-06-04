@@ -12,7 +12,9 @@ var active bool = true
 
 // short form vars in functions not allowed in package level
 func shortForm() {
-	name := "Michael"
+
+
+	name := "Michael" // the short form allows you to get type inference in Go
 	age := 30
 	isDeveloper := true
 
