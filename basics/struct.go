@@ -22,6 +22,7 @@ type Person struct {
 // Instead, it is common to create a normal function that returns a struct.
 //
 // This function creates and returns a new Person.
+
 func NewPerson(name string, age int) Person {
 	return Person{
 		Name: name,
@@ -43,6 +44,7 @@ func NewPerson(name string, age int) Person {
 //
 // A value receiver gets a copy of the struct.
 // This is good when you only need to read data.
+
 func (p Person) Greet() {
 	fmt.Println("Hello, my name is", p.Name)
 }
@@ -56,6 +58,7 @@ func (p Person) Greet() {
 // A pointer receiver lets us modify the original struct.
 //
 // We use this because we want to update the person's Age.
+
 func (p *Person) HaveBirthday() {
 	p.Age++
 	fmt.Println(p.Name, "is now", p.Age)
@@ -65,6 +68,7 @@ func (p *Person) HaveBirthday() {
 //
 // Because this method changes Name,
 // it needs a pointer receiver.
+
 func (p *Person) Rename(newName string) {
 	p.Name = newName
 }
@@ -73,6 +77,7 @@ func (p *Person) Rename(newName string) {
 //
 // In Go, we usually would not call this ClassExample,
 // because Go does not have classes.
+
 func StructExample() {
 	// Create a new Person using our constructor-style function.
 	p := NewPerson("John", 30)
