@@ -6,6 +6,11 @@ import (
 	"testing"
 )
 
+type SinglyLinkedListNode struct {
+	data int32
+	next *SinglyLinkedListNode
+}
+
 func captureOutput(f func()) string {
 	// Save the real stdout
 	originalStdout := os.Stdout
