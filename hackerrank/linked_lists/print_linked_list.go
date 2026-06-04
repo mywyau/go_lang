@@ -30,12 +30,3 @@ func printLinkedList(head *SinglyLinkedListNode) {
 		current = current.next
 	}
 }
-
-// func printLinkedList(head * SinglyLinkedListNode) {
-// 	current := head 
-
-// 	for current != nil {
-// 		fmt.Println(current.data)
-// 		current = current.next
-// 	}
-// }
