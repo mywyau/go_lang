@@ -1,78 +1,47 @@
 package arrays
 
-import (
-	"io"
-	"os"
-	"testing"
-)
+import "testing"
 
-type SinglyLinkedListNode struct {
-	data int32
-	next *SinglyLinkedListNode
-}
-
-func captureOutput(f func()) string {
-	// Save the real stdout
-	originalStdout := os.Stdout
-
-	// Create a pipe so we can capture anything printed
-	reader, writer, _ := os.Pipe()
-
-	// Temporarily replace stdout
-	os.Stdout = writer
-
-	// Run the function we want to test
-	f()
-
-	// Close writer and restore stdout
-	writer.Close()
-	os.Stdout = originalStdout
-
-	// Read the captured output
-	output, _ := io.ReadAll(reader)
-
-	return string(output)
-}
-
-func TestPrintLinkedListMultipleNodes(t *testing.T) {
-	node1 := &SinglyLinkedListNode{data: 16}
-	node2 := &SinglyLinkedListNode{data: 13}
-
-	node1.next = node2
-
-	output := captureOutput(func() {
-		printLinkedList(node1)
-	})
-
-	want := "16\n13\n"
-
-	if output != want {
-		t.Fatalf("expected %q, got %q", want, output)
+func TestSimpleArraySum(t *testing.T) {
+	tests := []struct {
+		name string
+		ar   []int32
+		want int32
+	}{
+		{
+			name: "sample input",
+			ar:   []int32{1, 2, 3, 4, 10, 11},
+			want: 31,
+		},
+		{
+			name: "empty array",
+			ar:   []int32{},
+			want: 0,
+		},
+		{
+			name: "single value",
+			ar:   []int32{5},
+			want: 5,
+		},
+		{
+			name: "negative numbers",
+			ar:   []int32{-1, -2, -3},
+			want: -6,
+		},
+		{
+			name: "mixed positive and negative numbers",
+			ar:   []int32{-1, 2, -3, 4},
+			want: 2,
+		},
 	}
-}
 
-func TestPrintLinkedListSingleNode(t *testing.T) {
-	node1 := &SinglyLinkedListNode{data: 99}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := simpleArraySum(tt.ar)
 
-	output := captureOutput(func() {
-		printLinkedList(node1)
-	})
-
-	want := "99\n"
-
-	if output != want {
-		t.Fatalf("expected %q, got %q", want, output)
-	}
-}
-
-func TestPrintLinkedListEmptyList(t *testing.T) {
-	output := captureOutput(func() {
-		printLinkedList(nil)
-	})
-
-	want := ""
-
-	if output != want {
-		t.Fatalf("expected %q, got %q", want, output)
+			if got != tt.want {
+				t.Fatalf("expected %d, got %d", tt.want, got)
+			}
+		})
 	}
 }
