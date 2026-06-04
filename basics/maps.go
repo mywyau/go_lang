@@ -1,6 +1,4 @@
-from pathlib import Path
-
-import "fmt"
+package basics
 
 /*
 Go Maps Learning File
@@ -26,9 +24,11 @@ Common uses:
 5. Grouping values
 */
 
+
 // ------------------------------------------------------------
 // 1. Creating maps
 // ------------------------------------------------------------
+
 
 func creatingMaps() {
 	// Option 1: map literal
