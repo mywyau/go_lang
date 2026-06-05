@@ -119,16 +119,13 @@ func deleteNode2(llist *SinglyLinkedListNode, position int32) *SinglyLinkedListN
 		return llist.next
 	}
 
-	// current := llist  // short form type inference
-	var current *SinglyLinkedListNode = llist // long form
+	current := llist
 
-	// i < position - 1 is the node we want to stop before the node we wish to delete
-	// we go from 0 -> position - 1, i++ to move all the pointers along for current
 	for i := int32(0); i < position-1; i++ {
 		current = current.next
 	}
-
-	current.next = current.next.next // point the current.next to the node after we want to delete, effectively deleting it
-
+	current.next = current.next.next
 	return llist
 }
+
+
