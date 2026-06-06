@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestPostOrder(t *testing.T) {
+func TestPreOrder(t *testing.T) {
 	tests := []struct {
 		name   string
 		values []int
@@ -13,7 +13,7 @@ func TestPostOrder(t *testing.T) {
 		{
 			name:   "example tree",
 			values: []int{1, 2, 5, 3, 6, 4},
-			want:   "4 3 6 5 2 1 ",
+			want:   "1 2 5 3 4 6 ",
 		},
 		{
 			name:   "single node",
@@ -28,12 +28,12 @@ func TestPostOrder(t *testing.T) {
 		{
 			name:   "left side tree",
 			values: []int{5, 4, 3, 2, 1},
-			want:   "1 2 3 4 5 ",
+			want:   "5 4 3 2 1 ",
 		},
 		{
 			name:   "right side tree",
 			values: []int{1, 2, 3, 4, 5},
-			want:   "5 4 3 2 1 ",
+			want:   "1 2 3 4 5 ",
 		},
 	}
 
@@ -46,7 +46,7 @@ func TestPostOrder(t *testing.T) {
 			}
 
 			got := captureOutput(func() {
-				postorder(root)
+				preorder(root)
 			})
 
 			if got != tt.want {

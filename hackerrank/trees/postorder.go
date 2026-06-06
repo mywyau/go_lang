@@ -24,7 +24,7 @@ func postorder(root *TreeNode) {
 	if root == nil {
 		return
 	}
-
+	
 	postorder(root.left)
 	postorder(root.right)
 	fmt.Printf("%d ", root.data)
