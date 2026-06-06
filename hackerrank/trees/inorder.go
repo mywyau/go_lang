@@ -3,7 +3,7 @@ package trees
 import "fmt"
 
 /*
-	Preorder means:
+	inorder means:
 
 	Root -> Left -> Right
 
@@ -16,12 +16,12 @@ import "fmt"
 
 // solution is recursive
 
-func preOrder(root *TreeNode) {
+func inorder(root *TreeNode) {
 	if root == nil {
 		return
 	}
 
+	inorder(root.left)
 	fmt.Printf("%d ", root.data)
-	preOrder(root.left)
-	preOrder(root.right)
+	inorder(root.right)
 }
