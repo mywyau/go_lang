@@ -2,22 +2,6 @@ package trees
 
 import "fmt"
 
-// Insert a value into the binary search tree.
-
-func insert(root *TreeNode, data int) *TreeNode {
-	if root == nil {
-		return &TreeNode{data: data}
-	}
-
-	if data <= root.data {
-		root.left = insert(root.left, data)
-	} else {
-		root.right = insert(root.right, data)
-	}
-
-	return root
-}
-
 /*
 	Preorder means:
 
