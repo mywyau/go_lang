@@ -97,6 +97,23 @@ func deleteNode(llist *SinglyLinkedListNode, position int32) *SinglyLinkedListNo
 
 */
 
+
+// deleteNode removes a node from a linked list at the given position.
+//
+// Plain English idea:
+// - If position is 0, delete the head by returning llist.next.
+// - Otherwise, walk to the node before the one we want to delete.
+// - Change current.next to skip over the deleted node.
+// - Return the original head.
+//
+// Example:
+//
+//	10 -> 20 -> 30 -> 40
+//
+// Delete position 2:
+//
+//	10 -> 20 -> 40
+
 func deleteNode(llist *SinglyLinkedListNode, position int32) *SinglyLinkedListNode {
 	if position == 0 {
 		return llist.next
@@ -114,7 +131,6 @@ func deleteNode(llist *SinglyLinkedListNode, position int32) *SinglyLinkedListNo
 }
 
 func deleteNode2(llist *SinglyLinkedListNode, position int32) *SinglyLinkedListNode {
-
 	if position == 0 {
 		return llist.next
 	}
@@ -124,8 +140,8 @@ func deleteNode2(llist *SinglyLinkedListNode, position int32) *SinglyLinkedListN
 	for i := int32(0); i < position-1; i++ {
 		current = current.next
 	}
+
 	current.next = current.next.next
+
 	return llist
 }
-
-
