@@ -2,22 +2,6 @@ package linkedlists
 
 import "testing"
 
-// func buildLinkedList(values []int32) *SinglyLinkedListNode {
-// 	if len(values) == 0 {
-// 		return nil
-// 	}
-
-// 	head := &SinglyLinkedListNode{data: values[0]}
-// 	current := head
-
-// 	for _, value := range values[1:] {
-// 		current.next = &SinglyLinkedListNode{data: value}
-// 		current = current.next
-// 	}
-
-// 	return head
-// }
-
 func TestCompareLinkedLists(t *testing.T) {
 	tests := []struct {
 		name  string
