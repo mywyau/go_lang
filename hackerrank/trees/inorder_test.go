@@ -4,8 +4,6 @@ import (
 	"testing"
 )
 
-
-
 func TestInOrder(t *testing.T) {
 	tests := []struct {
 		name   string
@@ -15,7 +13,7 @@ func TestInOrder(t *testing.T) {
 		{
 			name:   "example tree",
 			values: []int{1, 2, 5, 3, 6, 4},
-			want:   "4 3 6 5 2 1 ",
+			want:   "1 2 3 4 5 6 ",
 		},
 		{
 			name:   "single node",
@@ -35,7 +33,7 @@ func TestInOrder(t *testing.T) {
 		{
 			name:   "right side tree",
 			values: []int{1, 2, 3, 4, 5},
-			want:   "5 4 3 2 1 ",
+			want:   "1 2 3 4 5 ",
 		},
 	}
 
