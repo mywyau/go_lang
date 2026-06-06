@@ -130,18 +130,4 @@ func deleteNode(llist *SinglyLinkedListNode, position int32) *SinglyLinkedListNo
 	return llist
 }
 
-func deleteNode2(llist *SinglyLinkedListNode, position int32) *SinglyLinkedListNode {
-	if position == 0 {
-		return llist.next
-	}
 
-	current := llist
-
-	for i := int32(0); i < position-1; i++ {
-		current = current.next
-	}
-
-	current.next = current.next.next
-
-	return llist
-}
