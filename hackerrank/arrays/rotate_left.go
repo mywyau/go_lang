@@ -45,25 +45,9 @@ func rotateLeft(d int32, arr []int32) []int32 {
 	rotations := int(d) % n
 
 	result := []int32{}
-
 	result = append(result, arr[rotations:]...)
 	result = append(result, arr[:rotations]...)
 
 	return result
 }
 
-func rotateLeft2(d int32, arr []int32) []int32 {
-	n := len(arr)
-	if n == 0 {
-		return arr
-	}
-
-	rotations := int(d) % n
-	result := []int32{}
-
-	result = append(result, arr[rotations:]...)
-	result = append(result, arr[:rotations]...)
-
-	return result
-
-}
