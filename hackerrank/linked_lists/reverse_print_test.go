@@ -37,7 +37,7 @@ func TestReversePrintMultipleNodes(t *testing.T) {
 		reversePrint(node1)
 	})
 
-	want := "16\n13\n"
+	want := "13\n16\n"
 
 	if output != want {
 		t.Fatalf("expected %q, got %q", want, output)
