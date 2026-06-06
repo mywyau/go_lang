@@ -51,6 +51,30 @@ package arrays
 	For example, rotating 5 items by 5 gives the same array.
 */
 
+// func rotateLeft(d int32, arr []int32) []int32 {
+// 	n := len(arr)
+
+// 	if n == 0 {
+// 		return arr
+// 	}
+
+// 	// Convert d from int32 to int because slice indexes need int
+// 	// we use modulo because for larger number of rotations which are greater than the array ends up resetting the array,
+// 	//  and we need to find the remainder == number of actual rotations
+// 	rotations := int(d) % n
+
+// 	result := []int32{} // empty slice to build the answer
+
+// 	// The ... in Go is like saying: take all the items from this slice and append them one by one.
+// 	//  e.g. arr = [1, 2, 3, 4, 5],  d = 2 this would append [3,4,5] to the empty result
+// 	result = append(result, arr[rotations:]...)
+
+// 	// then we append [1,2] to [3,4,5] = [3,4,5,1,2]
+// 	result = append(result, arr[:rotations]...)
+
+// 	return result // which results in the array rotated to the left by 2
+// }
+
 func rotateLeft(d int32, arr []int32) []int32 {
 	n := len(arr)
 
@@ -58,19 +82,11 @@ func rotateLeft(d int32, arr []int32) []int32 {
 		return arr
 	}
 
-	// Convert d from int32 to int because slice indexes need int
-	// we use modulo because for larger number of rotations which are greater than the array ends up resetting the array,
-	//  and we need to find the remainder == number of actual rotations
 	rotations := int(d) % n
 
-	result := []int32{}  // empty slice to build the answer
-
-	// The ... in Go is like saying: take all the items from this slice and append them one by one.
-	//  e.g. arr = [1, 2, 3, 4, 5],  d = 2 this would append [3,4,5] to the empty result
-	result = append(result, arr[rotations:]...) 
-	
-	// then we append [1,2] to [3,4,5] = [3,4,5,1,2]
+	result := []int32{}
+	result = append(result, arr[rotations:]...)
 	result = append(result, arr[:rotations]...)
 
-	return result // which results in the array rotated to the left by 2
+	return result
 }
