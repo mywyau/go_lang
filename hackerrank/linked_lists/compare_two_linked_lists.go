@@ -6,6 +6,7 @@ package linkedlists
 //     - Move both pointers forward.
 // - After the loop, return true only if both pointers are nil.
 
+
 func compareLists(llist1 *SinglyLinkedListNode, llist2 *SinglyLinkedListNode) bool {
 	for llist1 != nil && llist2 != nil {
 		if llist1.data != llist2.data {
@@ -18,5 +19,3 @@ func compareLists(llist1 *SinglyLinkedListNode, llist2 *SinglyLinkedListNode) bo
 
 	return llist1 == nil && llist2 == nil
 }
-
-
