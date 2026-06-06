@@ -5,6 +5,7 @@ import (
 )
 
 func UnbufferedExample() {
+	
 	ch := make(chan int)
 
 	go func() {

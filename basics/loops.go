@@ -17,7 +17,7 @@ func LoopExamples1() {
 func LoopExamples2() {
 
 	j := 0
-	for j < 5 {
+	for j < 5 { // conditional in the for loop since no while loop
 		fmt.Println("while-style:", j)
 		j++
 	}
@@ -26,11 +26,11 @@ func LoopExamples2() {
 // 3. Infinite loop (break to exit)
 func LoopExamples3() {
 	k := 0
-	for {
+	for { // infinite loop due to no conditions
 		fmt.Println("infinite:", k)
 		k++
 		if k == 3 {
-			break
+			break // we break out here
 		}
 	}
 }
@@ -39,6 +39,7 @@ func LoopExamples4() {
 	// 4. Loop over a slice using range
 
 	nums := []int{10, 20, 30}
+
 	for index, value := range nums {
 		fmt.Println("slice-range:", index, value)
 	}
