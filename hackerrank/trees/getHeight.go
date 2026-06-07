@@ -1,5 +1,4 @@
-package trees 
-
+package trees
 
 func getHeight(root *TreeNode) int {
 
@@ -13,6 +12,8 @@ func getHeight(root *TreeNode) int {
 	if leftHeight > rightHeight {
 		return leftHeight + 1
 	}
-	
+
 	return rightHeight + 1
 }
+
+
