@@ -66,3 +66,34 @@ func inorder(root *TreeNode) {
 	fmt.Printf("%d ", root.data)
 	inorder(root.right)
 }
+
+// func main() {
+//     var n int
+//     fmt.Scan(&n)
+
+//     var root *Node
+
+//     for i := 0; i < n; i++ {
+//         var value int
+//         fmt.Scan(&value)
+
+//         root = insert(root, value)
+//     }
+
+//     inOrder(root)
+// }
+
+
+func insert(root *TreeNode, data int) *TreeNode {
+
+	if root == nil {
+		return &TreeNode{data: data}
+	}
+
+	if data <= root.data {
+		root.left = insert(root.left, data)
+	} else {
+		root.right = insert(root.right, data)
+	}
+	return root
+}
