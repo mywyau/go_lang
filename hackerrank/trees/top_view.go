@@ -2,6 +2,49 @@ package trees
 
 import "fmt"
 
+/*
+Top View of a Binary Tree
+
+Idea:
+- Imagine looking at the tree from directly above.
+- Each node has a horizontal distance (hd) from the root.
+- Root starts at hd = 0.
+- Going left decreases hd by 1.
+- Going right increases hd by 1.
+
+Example:
+
+        1
+         \
+          2
+           \
+            5
+           / \
+          3   6
+           \
+            4
+
+Horizontal distances:
+- 1 is hd 0
+- 2 is hd 1
+- 5 is hd 2
+- 3 is hd 1
+- 6 is hd 3
+- 4 is hd 2
+
+Top view means:
+- For each horizontal distance, keep the first node we see.
+- We use a queue to do level-order traversal.
+- This ensures we see higher nodes before lower nodes.
+
+Why BFS / queue?
+- Top view depends on which node appears first from the top.
+- BFS visits the tree level by level from top to bottom.
+
+Result:
+1 2 5 6
+*/
+
 type QueueItem struct {
 	node *TreeNode
 	hd   int
@@ -22,7 +65,6 @@ func insert(root *TreeNode, data int) *TreeNode {
 }
 
 func topView(root *TreeNode) {
-
 	if root == nil {
 		return
 	}
