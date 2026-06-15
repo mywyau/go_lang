@@ -22,6 +22,7 @@ func insert(root *TreeNode, data int) *TreeNode {
 }
 
 func topView(root *TreeNode) {
+
 	if root == nil {
 		return
 	}
