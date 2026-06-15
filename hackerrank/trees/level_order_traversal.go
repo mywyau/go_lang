@@ -32,7 +32,7 @@ Example:
          4
 
 Output:
-1 2 5 3 6 4
+	1 2 5 3 6 4
 */
 
 func levelOrder(root *TreeNode) {
