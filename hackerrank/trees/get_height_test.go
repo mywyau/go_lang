@@ -11,7 +11,7 @@ func TestGetHeight(t *testing.T) {
 		{
 			name:   "example tree",
 			values: []int{1, 2, 5, 3, 6, 4},
-			want:   3,
+			want:   4,
 		},
 		{
 			name:   "single node",
