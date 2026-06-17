@@ -92,13 +92,14 @@ import "fmt"
 // }
 
 func calculateMiniMaxSum(arr []int32) (int64, int64) {
-
-	// we initiate the starting values
+	// Start with the first value as our current smallest and largest.
+	// We use int64 because the sum may be larger than int32 can safely hold.
 	var totalSum int64 = 0
 	smallest := int64(arr[0])
 	largest := int64(arr[0])
 
-	// iterate over the number array and sum up all the values in the array
+	// Loop through every number.
+	// Add it to the total sum and update smallest/largest when needed.
 	for _, num := range arr {
 		value := int64(num)
 		totalSum += value
@@ -112,10 +113,12 @@ func calculateMiniMaxSum(arr []int32) (int64, int64) {
 		}
 	}
 
-	// subtract the largest and smallest from totalSum to get back min and max sum
+	// Minimum 4-number sum: remove the largest value.
+	// Maximum 4-number sum: remove the smallest value.
 	minSum := totalSum - largest
 	maxSum := totalSum - smallest
-	return minSum, maxSum  // finally return the min and max values
+
+	return minSum, maxSum
 }
 
 func miniMaxSum(arr []int32) {
