@@ -63,18 +63,44 @@ import "fmt"
 // 	fmt.Println(minSum, maxSum)
 // }
 
-
 // testable version
 
-func calculateMiniMaxSum(arr []int32) (int64, int64) {
-	var totalSum int64 = 0
+// func calculateMiniMaxSum(arr []int32) (int64, int64) {
+// 	var totalSum int64 = 0
 
+// 	smallest := int64(arr[0])
+// 	largest := int64(arr[0])
+
+// 	for _, num := range arr {
+// 		value := int64(num)
+
+// 		totalSum += value
+
+// 		if value < smallest {
+// 			smallest = value
+// 		}
+
+// 		if value > largest {
+// 			largest = value
+// 		}
+// 	}
+
+// 	minSum := totalSum - largest
+// 	maxSum := totalSum - smallest
+
+// 	return minSum, maxSum
+// }
+
+func calculateMiniMaxSum(arr []int32) (int64, int64) {
+
+	// we initiate the starting values
+	var totalSum int64 = 0
 	smallest := int64(arr[0])
 	largest := int64(arr[0])
 
+	// iterate over the number array and sum up all the values in the array
 	for _, num := range arr {
 		value := int64(num)
-
 		totalSum += value
 
 		if value < smallest {
@@ -86,10 +112,10 @@ func calculateMiniMaxSum(arr []int32) (int64, int64) {
 		}
 	}
 
+	// subtract the largest and smallest from totalSum to get back min and max sum
 	minSum := totalSum - largest
 	maxSum := totalSum - smallest
-
-	return minSum, maxSum
+	return minSum, maxSum  // finally return the min and max values
 }
 
 func miniMaxSum(arr []int32) {
