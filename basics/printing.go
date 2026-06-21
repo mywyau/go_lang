@@ -1,4 +1,4 @@
-package main
+package basics
 
 import (
 	"bufio"
@@ -42,27 +42,7 @@ Mental model:
 	Use Fprintln/Fprintf with bufio.NewWriter(os.Stdout) for HackerRank-style output.
 */
 
-type Person struct {
-	Name string
-	Age  int
-}
-
-func main() {
-	printExample()
-	printlnExample()
-	printfExample()
-	formatVerbExamples()
-	structPrintingExample()
-	slicePrintingExample()
-	mapPrintingExample()
-	stringCharacterPrintingExample()
-	sprintfExample()
-	errorfExample()
-	bufferedWriterExample()
-	printLoopExamples()
-}
-
-func printExample() {
+func PrintExample() {
 	fmt.Println("---- fmt.Print example ----")
 
 	// fmt.Print prints exactly what you give it.
@@ -100,7 +80,7 @@ func printlnExample() {
 	fmt.Println()
 }
 
-func printfExample() {
+func PrintfExample() {
 	fmt.Println("---- fmt.Printf example ----")
 
 	name := "Michael"
@@ -126,7 +106,7 @@ func printfExample() {
 	fmt.Println()
 }
 
-func formatVerbExamples() {
+func FormatVerbExamples() {
 	fmt.Println("---- formatting verbs ----")
 
 	name := "Michael"
@@ -148,7 +128,7 @@ func formatVerbExamples() {
 	fmt.Println()
 }
 
-func structPrintingExample() {
+func StructPrintingExample() {
 	fmt.Println("---- printing structs ----")
 
 	person := Person{
@@ -171,7 +151,7 @@ func structPrintingExample() {
 	fmt.Println()
 }
 
-func slicePrintingExample() {
+func SlicePrintingExample() {
 	fmt.Println("---- printing slices ----")
 
 	numbers := []int{10, 20, 30}
@@ -208,7 +188,7 @@ func mapPrintingExample() {
 	fmt.Println()
 }
 
-func stringCharacterPrintingExample() {
+func StringCharacterPrintingExample() {
 	fmt.Println("---- printing characters from strings ----")
 
 	s := "hello"
@@ -230,7 +210,7 @@ func stringCharacterPrintingExample() {
 	fmt.Println()
 }
 
-func sprintfExample() {
+func SprintfExample() {
 	fmt.Println("---- fmt.Sprintf example ----")
 
 	name := "Michael"
@@ -243,17 +223,17 @@ func sprintfExample() {
 	fmt.Println(message)
 
 	// This is useful when you want to build a string and return it.
-	anotherMessage := createScoreMessage("Alice", 88)
+	anotherMessage := CreateScoreMessage("Alice", 88)
 	fmt.Println(anotherMessage)
 
 	fmt.Println()
 }
 
-func createScoreMessage(name string, score int) string {
+func CreateScoreMessage(name string, score int) string {
 	return fmt.Sprintf("%s scored %d points", name, score)
 }
 
-func errorfExample() {
+func ErrorfExample() {
 	fmt.Println("---- fmt.Errorf example ----")
 
 	result, err := divide(10, 0)
@@ -266,44 +246,44 @@ func errorfExample() {
 	fmt.Println()
 }
 
-func divide(a, b int) (int, error) {
-	if b == 0 {
-		// fmt.Errorf creates a formatted error.
-		return 0, fmt.Errorf("cannot divide %d by zero", a)
-	}
+// func divide(a, b int) (int, error) {
+// 	if b == 0 {
+// 		// fmt.Errorf creates a formatted error.
+// 		return 0, fmt.Errorf("cannot divide %d by zero", a)
+// 	}
 
-	return a / b, nil
-}
+// 	return a / b, nil
+// }
 
 func bufferedWriterExample() {
 	fmt.Println("---- buffered writer example ----")
 
 	/*
-	You often see this style in HackerRank:
+		You often see this style in HackerRank:
 
-		writer := bufio.NewWriter(os.Stdout)
-		defer writer.Flush()
+			writer := bufio.NewWriter(os.Stdout)
+			defer writer.Flush()
 
-		fmt.Fprintln(writer, result)
+			fmt.Fprintln(writer, result)
 
-	Why?
+		Why?
 
-	Because writing through a buffer can be faster than printing directly
-	many times.
+		Because writing through a buffer can be faster than printing directly
+		many times.
 
-	These are the writer versions:
+		These are the writer versions:
 
-		fmt.Fprint(writer, ...)
-		fmt.Fprintln(writer, ...)
-		fmt.Fprintf(writer, ...)
+			fmt.Fprint(writer, ...)
+			fmt.Fprintln(writer, ...)
+			fmt.Fprintf(writer, ...)
 
-	They are like:
+		They are like:
 
-		fmt.Print(...)
-		fmt.Println(...)
-		fmt.Printf(...)
+			fmt.Print(...)
+			fmt.Println(...)
+			fmt.Printf(...)
 
-	But instead of writing directly to stdout, they write to the given writer.
+		But instead of writing directly to stdout, they write to the given writer.
 	*/
 
 	writer := bufio.NewWriter(os.Stdout)
