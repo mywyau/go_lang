@@ -63,7 +63,7 @@ func PrintExample() {
 	fmt.Print("\n\n")
 }
 
-func printlnExample() {
+func PrintlnExample() {
 	fmt.Println("---- fmt.Println example ----")
 
 	// fmt.Println prints values and adds a newline at the end.
