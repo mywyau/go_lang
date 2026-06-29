@@ -608,9 +608,9 @@ Important notes
 
 5. For most DSA problems, use slices rather than arrays.
 */
-'''
 
-path = Path("/mnt/data/slices_learning.go")
-path.write_text(content)
 
-print(f"Created file: {path}")
+// path = Path("/mnt/data/slices_learning.go")
+// path.write_text(content)
+
+// print(f"Created file: {path}")
