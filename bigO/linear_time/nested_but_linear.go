@@ -2,6 +2,7 @@ package bigo
 
 import "fmt"
 
+// O(n)
 // this is a nested loop but the inner loop only runs  10 times hence not quadratic since there is constant number of iterations in the inner loop
 
 func printTenThingsForEach(nums []int) {
