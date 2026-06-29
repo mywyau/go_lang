@@ -1,6 +1,7 @@
 package bigo
 
 
+// O(1)
 // this is constant time 
 
 // Absolutely. Big O is about answering:
@@ -10,7 +11,7 @@ package bigo
 // this will always be O(1) since it just accesses a single element 
 // even with 1, 10, 100, 1000, 10000, 100000, 1000000 etc. 
 
-func firfirstElement(nums []int) int {
+func findfirstElement(nums []int) int {
 	return nums[0]
 }
 
