@@ -1,0 +1,32 @@
+Bog O can approximately explain 2 things 
+
+1. time complexity 
+2. space complexity 
+
+**** Time Complexity ****
+
+ - how much work is the code doing?
+
+**** Space Complexity ****
+
+ - how much extra memory does the code use?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
