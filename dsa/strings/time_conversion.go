@@ -63,3 +63,24 @@ func timeConversion(s string) string {
 
 	return strconv.Itoa(hourInt) + rest
 }
+
+// func timeConversion(s string) string {
+// 	hour := s[:2]
+// 	rest := s[2:8]
+// 	period := s[8:]
+
+// 	if period == "AM" {
+// 		if hour == "12" {
+// 			return "00" + rest
+// 		}
+// 		return hour + rest
+// 	}
+
+// 	if hour == "12" {
+// 		return "12" + rest
+// 	}
+
+// 	hourInt, _ := strconv.Atoi(hour)
+// 	hourInt += 12
+// 	return strconv.Itoa(hourInt) + rest
+// }
