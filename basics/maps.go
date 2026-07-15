@@ -1,5 +1,7 @@
 package basics
 
+import "fmt"
+
 /*
 Go Maps Learning File
 =====================
@@ -24,11 +26,9 @@ Common uses:
 5. Grouping values
 */
 
-
 // ------------------------------------------------------------
 // 1. Creating maps
 // ------------------------------------------------------------
-
 
 func creatingMaps() {
 	// Option 1: map literal
@@ -71,7 +71,7 @@ func readingMaps() {
 // ------------------------------------------------------------
 
 func checkingExists() {
-	
+
 	ages := map[string]int{
 		"Michael": 30,
 	}
@@ -272,7 +272,7 @@ func groupWordsByLength(words []string) map[int][]string {
 // Main function to run examples
 // ------------------------------------------------------------
 
-func main() {
+func Main() {
 	fmt.Println("=== Creating maps ===")
 	creatingMaps()
 
@@ -439,9 +439,9 @@ if exists {
 	fmt.Println(value)
 }
 */
-'''
+// '''
 
-path = Path("/mnt/data/maps_learning.go")
-path.write_text(content)
+// path = Path("/mnt/data/maps_learning.go")
+// path.write_text(content)
 
-print(f"Created file: {path}")
+// print(f"Created file: {path}")

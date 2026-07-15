@@ -396,63 +396,63 @@ func moveZeroes(nums []int) []int {
 // Main function to run examples
 // ------------------------------------------------------------
 
-func main() {
-	fmt.Println("=== Arrays vs slices ===")
-	arraysVsSlices()
+// func Main() {
+// 	fmt.Println("=== Arrays vs slices ===")
+// 	arraysVsSlices()
 
-	fmt.Println("\n=== Creating slices ===")
-	creatingSlices()
+// 	fmt.Println("\n=== Creating slices ===")
+// 	creatingSlices()
 
-	fmt.Println("\n=== len and cap ===")
-	lenAndCap()
+// 	fmt.Println("\n=== len and cap ===")
+// 	lenAndCap()
 
-	fmt.Println("\n=== Accessing and updating ===")
-	accessingAndUpdating()
+// 	fmt.Println("\n=== Accessing and updating ===")
+// 	accessingAndUpdating()
 
-	fmt.Println("\n=== Looping slices ===")
-	loopingSlices()
+// 	fmt.Println("\n=== Looping slices ===")
+// 	loopingSlices()
 
-	fmt.Println("\n=== Slicing slices ===")
-	slicingSlices()
+// 	fmt.Println("\n=== Slicing slices ===")
+// 	slicingSlices()
 
-	fmt.Println("\n=== Shared backing array ===")
-	sharedBackingArray()
+// 	fmt.Println("\n=== Shared backing array ===")
+// 	sharedBackingArray()
 
-	fmt.Println("\n=== Copying slices ===")
-	copyingSlices()
+// 	fmt.Println("\n=== Copying slices ===")
+// 	copyingSlices()
 
-	fmt.Println("\n=== Nil vs empty slice ===")
-	nilVsEmptySlice()
+// 	fmt.Println("\n=== Nil vs empty slice ===")
+// 	nilVsEmptySlice()
 
-	fmt.Println("\n=== Passing slices to functions ===")
-	passingSlicesToFunctions()
+// 	fmt.Println("\n=== Passing slices to functions ===")
+// 	passingSlicesToFunctions()
 
-	fmt.Println("\n=== Sum ===")
-	fmt.Println(sum([]int{1, 2, 3, 4}))
+// 	fmt.Println("\n=== Sum ===")
+// 	fmt.Println(sum([]int{1, 2, 3, 4}))
 
-	fmt.Println("\n=== Max ===")
-	fmt.Println(max([]int{4, 10, 2, 8}))
+// 	fmt.Println("\n=== Max ===")
+// 	fmt.Println(max([]int{4, 10, 2, 8}))
 
-	fmt.Println("\n=== Reverse ===")
-	fmt.Println(reverse([]int{1, 2, 3, 4, 5}))
+// 	fmt.Println("\n=== Reverse ===")
+// 	fmt.Println(reverse([]int{1, 2, 3, 4, 5}))
 
-	fmt.Println("\n=== Filter even ===")
-	fmt.Println(filterEven([]int{1, 2, 3, 4, 5, 6}))
+// 	fmt.Println("\n=== Filter even ===")
+// 	fmt.Println(filterEven([]int{1, 2, 3, 4, 5, 6}))
 
-	fmt.Println("\n=== Contains ===")
-	fmt.Println(contains([]int{1, 2, 3}, 2))
-	fmt.Println(contains([]int{1, 2, 3}, 99))
+// 	fmt.Println("\n=== Contains ===")
+// 	fmt.Println(contains([]int{1, 2, 3}, 2))
+// 	fmt.Println(contains([]int{1, 2, 3}, 99))
 
-	fmt.Println("\n=== Remove value ===")
-	fmt.Println(removeValue([]int{1, 2, 3, 2, 4}, 2))
+// 	fmt.Println("\n=== Remove value ===")
+// 	fmt.Println(removeValue([]int{1, 2, 3, 2, 4}, 2))
 
-	fmt.Println("\n=== Reverse runes ===")
-	fmt.Println(string(reverseRunes([]rune("hello"))))
-	fmt.Println(string(reverseRunes([]rune("你好"))))
+// 	fmt.Println("\n=== Reverse runes ===")
+// 	fmt.Println(string(reverseRunes([]rune("hello"))))
+// 	fmt.Println(string(reverseRunes([]rune("你好"))))
 
-	fmt.Println("\n=== Move zeroes ===")
-	fmt.Println(moveZeroes([]int{0, 1, 0, 3, 12}))
-}
+// 	fmt.Println("\n=== Move zeroes ===")
+// 	fmt.Println(moveZeroes([]int{0, 1, 0, 3, 12}))
+// }
 
 /*
 Practice Tasks
