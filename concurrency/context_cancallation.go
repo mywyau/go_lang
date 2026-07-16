@@ -13,7 +13,7 @@ func ContextCancel() {
 	go func() {
 		for {
 			select {
-			case <-ctx.Done():
+			case <- ctx.Done():
 				fmt.Println("worker stopped")
 				return
 			default:
